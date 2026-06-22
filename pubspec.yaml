@@ -1,0 +1,64 @@
+name: dill_adala
+description: "ظل العدالة — تطبيق مكتب محاماة (واجهة أمامية فقط)"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.3.0
+  url_launcher: ^6.3.0
+  image_picker: ^1.1.0
+  http: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.1
+  flutter_native_splash: ^2.4.0
+
+# Native launch splash: a static logo on the brand-black background so cold
+# start shows no white flash. It hands off seamlessly to the animated Flutter
+# SplashScreen (lib/screens/splash_screen.dart), which shares this background.
+flutter_native_splash:
+  color: "#0D0D0D"
+  image: assets/icon/icon_1024.png
+  android_12:
+    color: "#0D0D0D"
+    image: assets/icon/icon_1024.png
+  android: true
+  ios: true
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon_1024.png"
+  adaptive_icon_background: "#AE8C4F"
+  adaptive_icon_foreground: "assets/icon/adaptive_fg.png"
+  remove_alpha_ios: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo_400Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Cairo_500Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Cairo_600SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Cairo_700Bold.ttf
+          weight: 700
+    - family: NRT
+      fonts:
+        - asset: assets/fonts/NRT-Bd.ttf
